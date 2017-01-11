@@ -13,7 +13,7 @@ var path_new = {
 };
 
 gulp.task('default', function () {
-    gulp.watch('src/**/*.*', ['views', 'scss', 'script']);
+    gulp.watch('src/**/*.*', ['views', 'scss']);
 });
 
 gulp.task('views', function buildHTML() {
@@ -22,7 +22,10 @@ gulp.task('views', function buildHTML() {
         .pipe(gulp.dest(path_new.dest))
 });
 gulp.task('scss', function buildHTML() {
-    return gulp.src('./src/scss/**/*.scss')
+    return gulp.src([
+        './src/scss/**/*.scss',
+        '!./src/scss/include/**/*.scss'
+    ])
         .pipe(sass())
         .pipe(cleanCSS({
             compatibility: 'ie8',

@@ -1,0 +1,24 @@
+//When mobile
+@media screen and (max-width: 768px) {
+  body {
+    background-color: yellow;
+  }
+
+  .stick-top {
+    position: inherit;
+    top: inherit;
+  }
+
+  [class*="col-"] {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .row {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .container-fluid {
+    margin: 0;
+    padding: 0;
+  }
+}

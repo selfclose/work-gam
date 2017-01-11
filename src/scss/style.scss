@@ -5,14 +5,6 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-//Override Zone
-.slick-slide {
-  height: inherit !important;
-}
-.slick-dotted.slick-slider {
-  margin: 0 !important;
-}
-
 .btn {
   &-red {
     background: rgb(249,116,92);
@@ -46,7 +38,7 @@ body {
 }
 
 //-----widget ThumbMenu-----//
-$location_menu_icon: 'http://localhost:1234/img/web_ico.png';
+$location_menu_icon: '../img/web_ico.png';
 
 .thumb-menu {
   background: -moz-linear-gradient(top,  rgba(86,86,86,0.86) 0%, rgba(0,0,0,1) 100%);
@@ -99,7 +91,7 @@ $location_menu_icon: 'http://localhost:1234/img/web_ico.png';
 }
 
 //------Widget Games-----//
-$location_games_icon: 'http://localhost:1234/img/sprites-profile.png';
+$location_games_icon: '../img/sprites-profile.png';
 
 .widget-games {
   background: rgb(20,19,25);
@@ -233,28 +225,5 @@ $md-lg: "only screen (min-width: 992px) and (max-width:1199px)";
 $lg-min: "only screen and (min-width:1200px)";
 $lg-max: "only screen and (max-width:none)";
 
-
-//When mobile
-@media screen and (max-width: 768px) {
-  body {
-    background-color: yellow;
-  }
-
-  .stick-top {
-    position: inherit;
-    top: inherit;
-  }
-
-  [class*="col-"] {
-    padding-left: 0;
-    padding-right: 0;
-  }
-  .row {
-    margin-left: 0;
-    margin-right: 0;
-  }
-  .container-fluid {
-    margin: 0;
-    padding: 0;
-  }
-}
+@import "include/override_default";
+@import "include/mobile_override";
