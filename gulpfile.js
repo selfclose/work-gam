@@ -3,13 +3,14 @@ var gulp = require('gulp'),
     watch = require('gulp-watch'),
     sass = require('gulp-sass'),
     cleanCSS = require('gulp-clean-css');
+var gulpCopy = require('gulp-copy');
 //var compass = require('gulp-compass');
 
 //---new Watch---//
 
 var path_new = {
     source: ['./src/html/**/*.pug', '!./src/html/include/**/*.pug'],
-    dest: './dist/html'
+    dest: './dest/html'
 };
 
 gulp.task('default', function () {
@@ -28,5 +29,10 @@ gulp.task('scss', function buildHTML() {
             compatibility: 'ie8',
             specialComments: 0
         }))
-        .pipe(gulp.dest('./dist/css'))
+        .pipe(gulp.dest('./dest/css'))
+});
+
+gulp.task('script', function () {
+   return gulp.src('./src/js/**/*.js')
+       .pipe(gulp.dest('./dest'));
 });

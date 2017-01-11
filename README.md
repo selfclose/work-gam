@@ -1,5 +1,5 @@
 # work-gam
-new website for gambling i've working on ace company project
+new website i've working on ace company project
 
 ### Tools using here
 * composer
