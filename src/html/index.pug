@@ -22,22 +22,8 @@ body(ng-app='mainApp', ng-controller='mainCtrl')
                             a.btn.btn-sm.btn-red 注册
                             a.btn.btn-sm.btn-red 忘记密码
         //menu row
-        .row.thumb-menu
-            .container
-                .row.hidden-xs.flex
-                    .col-sm-3.flex-middle
-                        img(src='http://localhost:1234/img/logo.png')
-                    .col-sm-9.flex-space-between
-                        a.btn.btn-lg.menu-icon.jdb
-                        a.btn.btn-lg.menu-icon.fishing
-                        a.btn.btn-lg.menu-icon.ranking
-                        a.btn.btn-lg.menu-icon.recreaction
-                        a.btn.btn-lg.menu-icon.sport
-                        a.btn.btn-lg.menu-icon.lottery
-                        a.btn.btn-lg.menu-icon.mobile
-                        a.btn.btn-lg.menu-icon.activity
-                        a.btn.btn-lg.menu-icon.lucky
-                        a.btn.btn-lg.menu-icon.played
+        .row
+            include include/widget_menu
     .full-width
         .slider-carousel
             img(src='../img/banner-0929.jpg')
