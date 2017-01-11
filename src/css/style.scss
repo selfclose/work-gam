@@ -1,0 +1,260 @@
+//@import "compass";
+$cl_lite: #dcdcdc;
+
+body {
+  -webkit-font-smoothing: antialiased;
+}
+
+//Override Zone
+.slick-slide {
+  height: inherit !important;
+}
+.slick-dotted.slick-slider {
+  margin: 0 !important;
+}
+
+.btn {
+  &-red {
+    background: rgb(249,116,92);
+    background: -moz-linear-gradient(top,  rgba(249,116,92,1) 1%, rgba(249,90,89,1) 100%);
+    background: -webkit-linear-gradient(top,  rgba(249,116,92,1) 1%,rgba(249,90,89,1) 100%);
+    background: linear-gradient(to bottom,  rgba(249,116,92,1) 1%,rgba(249,90,89,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9745c', endColorstr='#f95a59',GradientType=0 );
+  }
+  &-green {
+    background: rgb(162,213,31);
+    background: -moz-linear-gradient(top,  rgba(162,213,31,1) 1%, rgba(91,167,5,1) 100%);
+    background: -webkit-linear-gradient(top,  rgba(162,213,31,1) 1%,rgba(91,167,5,1) 100%);
+    background: linear-gradient(to bottom,  rgba(162,213,31,1) 1%,rgba(91,167,5,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a2d51f', endColorstr='#5ba705',GradientType=0 );
+  }
+}
+
+//--- Widget Topbar ---//
+.topbar {
+  //@include background-image(linear-gradient(top, rgba(76,76,76,0.7) 0%,rgba(89,89,89,0.7) 18%,rgba(28,28,28,0.7) 80%,rgba(19,19,19,0.7) 100%));
+  background: -moz-linear-gradient(top,  rgba(0,0,0,0.65) 0%, rgba(0,0,0,0.65) 1%, rgba(0,0,0,0.73) 100%);
+  background: -webkit-linear-gradient(top,  rgba(0,0,0,0.65) 0%,rgba(0,0,0,0.65) 1%,rgba(0,0,0,0.73) 100%);
+  background: linear-gradient(to bottom,  rgba(0,0,0,0.65) 0%,rgba(0,0,0,0.65) 1%,rgba(0,0,0,0.73) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#ba000000',GradientType=0 );
+
+  span {
+    color: $cl_lite;
+    //display: flex;
+  }
+
+}
+
+//-----widget ThumbMenu-----//
+$location_menu_icon: 'http://localhost:1234/img/web_ico.png';
+
+.thumb-menu {
+  background: -moz-linear-gradient(top,  rgba(86,86,86,0.86) 0%, rgba(0,0,0,1) 100%);
+  background: -webkit-linear-gradient(top,  rgba(86,86,86,0.86) 0%,rgba(0,0,0,1) 100%);
+  background: linear-gradient(to bottom,  rgba(86,86,86,0.86) 0%,rgba(0,0,0,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#db565656', endColorstr='#000000',GradientType=0 );
+
+  .menu-icon {
+    background: url($location_menu_icon);
+    //display: inline-block;
+    width: 59px;
+    height: 90px;
+    filter: grayscale(1);
+    transition: .8s;
+    &:hover {
+      filter: grayscale(0);
+    }
+
+    &.jdb {
+      background-position: -625px -89px;
+    }
+    &.fishing {
+      background-position: -768px -89px;
+    }
+    &.ranking {
+      background-position: -700px -89px;
+    }
+    &.recreaction {
+      background-position: -75px -90px;
+    }
+    &.sport {
+      background-position: -143px -90px;
+    }
+    &.lottery {
+      background-position: -278px -90px;
+    }
+    &.mobile {
+      background-position: -211px -90px;
+    }
+    &.activity {
+      background-position: -346px -90px;
+    }
+    &.lucky {
+      background-position: -414px -90px;
+    }
+    &.played {
+      background-position: -485px -90px;
+    }
+  }
+}
+
+//------Widget Games-----//
+$location_games_icon: 'http://localhost:1234/img/sprites-profile.png';
+
+.widget-games {
+  background: rgb(20,19,25);
+  background: -moz-linear-gradient(top,  rgba(20,19,25,1) 0%, rgba(25,24,29,1) 100%);
+  background: -webkit-linear-gradient(top,  rgba(20,19,25,1) 0%,rgba(25,24,29,1) 100%);
+  background: linear-gradient(to bottom,  rgba(20,19,25,1) 0%,rgba(25,24,29,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#141319', endColorstr='#19181d',GradientType=0 );
+
+  .game-icon {
+    display: block;
+    width: 182px;
+    height: 120px;
+    background: url($location_games_icon) no-repeat;
+    cursor: pointer;
+
+    &.card {
+
+    }
+    &.football {
+      background-position: 0 -120px;
+      &-label {
+        background-position: -182px 0;
+        height: 62px;
+      }
+    }
+    &.bonus {
+      background-position: 0 -240px;
+      &-label {
+        background-position: -182px -124px;
+        height: 62px;
+      }
+    }
+    &.lottery {
+      background-position: 0 -360px;
+      &-label {
+        background-position: -182px -186px;
+        height: 62px;
+      }
+    }
+    &.case {
+      background-position: -182px -262px;
+      height: 189px;
+    }
+
+    &:hover:not(.not-hover) {
+      transform: translateY(-20px);
+    }
+    transition: 0.4s;
+  }
+
+  .promotion-set {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 34px;
+
+    .promotion-icon {
+      width: 64px;
+      height: 64px;
+      background: #ccc;
+    }
+  }
+}
+
+//-----End Widget Games-----//
+.input {
+  &-textbox {
+    width: 135px;
+    height: 28px;
+    line-height: 28px;
+    font-size: 12px;
+    color: #FFF;
+    border: 1px solid #413a37;
+    border-radius: 5px !important;
+    text-indent: 5px;
+    background-color: #1a1718;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px
+  }
+}
+
+.partner {
+  display: flex;
+  justify-content: space-between;
+}
+
+//more css
+.full-width {
+  width: 100%;
+  padding: 0;
+}
+.no-padding {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.stick-top {
+  position: fixed;
+  top: 0;
+  z-index: 10;
+  width: 100%;
+}
+
+
+
+.flex {
+  display: flex;
+  &-middle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &-space-between {
+     display: flex;
+     justify-content: space-between;
+   }
+}
+
+$xs-min: "only screen and (min-width:none)";
+$xs-max: "only screen and (max-width:520px)";
+$xs-sm: "only screen (min-width: none) and (max-width:767px)";
+
+$sm-min: "only screen and (min-width:768px)";
+$sm-max: "only screen and (max-width:991px)";
+$sm-md: "only screen (min-width: 768px) and (max-width:991px)";
+
+$md-min: "only screen and (min-width:992px)";
+$md-max: "only screen and (max-width:1199px)";
+$md-lg: "only screen (min-width: 992px) and (max-width:1199px)";
+
+$lg-min: "only screen and (min-width:1200px)";
+$lg-max: "only screen and (max-width:none)";
+
+
+//When mobile
+@media screen and (max-width: 768px) {
+  body {
+    background-color: yellow;
+  }
+
+  .stick-top {
+    position: inherit;
+    top: inherit;
+  }
+
+  [class*="col-"] {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .row {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .container-fluid {
+    margin: 0;
+    padding: 0;
+  }
+}

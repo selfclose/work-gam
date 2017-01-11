@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css" rel="stylesheet">
+  <!--link(href='https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.0/assets/owl.carousel.min.css', rel='stylesheet')-->
+  <!--link(href='https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.0/assets/owl.theme.default.css', rel='stylesheet')-->
+  <link href="../css/style.css" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.js"></script>
+  <!--script(src='https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.0/owl.carousel.min.js')-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="../js/script.js"></script>
+</head>
+<body ng-app="mainApp" ng-controller="mainCtrl">
+  <div class="container-fluid">
+    <!--top row-->
+    <div class="row">
+      <div class="topbar">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-4"><span>{{time_zone}}</span><span get-current-time="time_format"></span></div>
+            <div class="col-sm-2 col-xs-6">
+              <input class="input-textbox full-width" type="text" placeholder="账号">
+            </div>
+            <div class="col-sm-2 col-xs-6">
+              <input class="input-textbox full-width" type="password">
+            </div>
+            <div class="col-sm-3"><a class="btn btn-sm btn-red">登录</a><a class="btn btn-sm btn-red">注册</a><a class="btn btn-sm btn-red">忘记密码</a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--menu row-->
+    <div class="row thumb-menu">
+      <div class="container">
+        <div class="row hidden-xs flex">
+          <div class="col-sm-3 flex-middle"><img src="http://localhost:1234/img/logo.png"></div>
+          <div class="col-sm-9 flex-space-between"><a class="btn btn-lg menu-icon jdb"></a><a class="btn btn-lg menu-icon fishing"></a><a class="btn btn-lg menu-icon ranking"></a><a class="btn btn-lg menu-icon recreaction"></a><a class="btn btn-lg menu-icon sport"></a><a class="btn btn-lg menu-icon lottery"></a><a class="btn btn-lg menu-icon mobile"></a><a class="btn btn-lg menu-icon activity"></a><a class="btn btn-lg menu-icon lucky"></a><a class="btn btn-lg menu-icon played"></a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="full-width">
+    <div class="slider-carousel"><img src="http://localhost:1234/img/banner-0929.jpg"><img src="http://localhost:1234/img/banner-0930.jpg"><img src="http://localhost:1234/img/banner-0907.jpg"><img src="http://localhost:1234/img/banner-0829.jpg"><img src="http://localhost:1234/img/banner-0901.jpg"><img src="http://localhost:1234/img/banner-0525.jpg"></div>
+  </div>
+  <div class="container-fluid widget-games">
+    <div class="row">
+      <div class="col-sm-12 promotion-set">
+        <div class="game-icon case not-hover">
+          <div class="game-icon"></div>
+        </div>
+        <div class="game-icon case not-hover">
+          <div class="game-icon football"></div>
+          <div class="game-icon football-label not-hover"></div>
+        </div>
+        <div class="game-icon case not-hover">
+          <div class="game-icon bonus"></div>
+          <div class="game-icon bonus-label not-hover"></div>
+        </div>
+        <div class="game-icon case">
+          <div class="game-icon lottery"></div>
+          <div class="game-icon lottery-label not-hover"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row announcment">
+      <div class="col-xs-2"><a class="btn btn-warning">Test1</a></div>
+      <div class="col-xs-8 marquee-text">
+        <p>text here</p>
+      </div>
+      <div class="col-xs-2"><a class="btn btn-danger">Test2</a></div>
+    </div>
+    <div class="row">
+      <div class="col-sm-12">
+        <p>Experience</p><a class="btn btn-primary full-width" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">Link with href</a>
+        <div class="collapse" id="collapseExample">
+          <div class="card card-block">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.</div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-12">
+        <p>Partner</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-12 promotion-set partner">
+        <div class="promotion-icon"></div>
+        <div class="promotion-icon"></div>
+        <div class="promotion-icon"></div>
+        <div class="promotion-icon"></div>
+      </div>
+    </div>
+    <div class="row footer">
+      <div class="col-sm-3">
+        <p>Foot1</p>
+      </div>
+      <div class="col-sm-3">
+        <p>Foot2</p>
+      </div>
+      <div class="col-sm-3">
+        <p>Foot3</p>
+      </div>
+      <div class="col-sm-3">
+        <p>Footer4p</p>
+      </div>
+    </div>
+  </div>
+</body>

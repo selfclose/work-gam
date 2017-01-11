@@ -1,0 +1,98 @@
+doctype html
+head
+    include include/header
+
+body(ng-app='mainApp', ng-controller='mainCtrl')
+    .container-fluid
+        //top row
+        .row
+            .topbar
+                .container
+                    .row
+                        .col-sm-4
+                            span {{time_zone}}
+                            span(get-current-time='time_format')
+
+                        .col-sm-2.col-xs-6
+                            input.input-textbox.full-width(type='text', placeholder='账号')
+                        .col-sm-2.col-xs-6
+                            input.input-textbox.full-width(type='password')
+                        .col-sm-3
+                            a.btn.btn-sm.btn-red 登录
+                            a.btn.btn-sm.btn-red 注册
+                            a.btn.btn-sm.btn-red 忘记密码
+        //menu row
+        .row.thumb-menu
+            .container
+                .row.hidden-xs.flex
+                    .col-sm-3.flex-middle
+                        img(src='http://localhost:1234/img/logo.png')
+                    .col-sm-9.flex-space-between
+                        a.btn.btn-lg.menu-icon.jdb
+                        a.btn.btn-lg.menu-icon.fishing
+                        a.btn.btn-lg.menu-icon.ranking
+                        a.btn.btn-lg.menu-icon.recreaction
+                        a.btn.btn-lg.menu-icon.sport
+                        a.btn.btn-lg.menu-icon.lottery
+                        a.btn.btn-lg.menu-icon.mobile
+                        a.btn.btn-lg.menu-icon.activity
+                        a.btn.btn-lg.menu-icon.lucky
+                        a.btn.btn-lg.menu-icon.played
+    .full-width
+        .slider-carousel
+            img(src='http://localhost:1234/img/banner-0929.jpg')
+            img(src='http://localhost:1234/img/banner-0930.jpg')
+            img(src='http://localhost:1234/img/banner-0907.jpg')
+            img(src='http://localhost:1234/img/banner-0829.jpg')
+            img(src='http://localhost:1234/img/banner-0901.jpg')
+            img(src='http://localhost:1234/img/banner-0525.jpg')
+    .container-fluid.widget-games
+        .row
+            .col-sm-12.promotion-set
+                .game-icon.case.not-hover
+                    .game-icon
+                .game-icon.case.not-hover
+                    .game-icon.football
+                    .game-icon.football-label.not-hover
+                .game-icon.case.not-hover
+                    .game-icon.bonus
+                    .game-icon.bonus-label.not-hover
+                .game-icon.case
+                    .game-icon.lottery
+                    .game-icon.lottery-label.not-hover
+    .container
+        .row.announcment
+            .col-xs-2
+                a.btn.btn-warning Test1
+            .col-xs-8.marquee-text
+                p text here
+            .col-xs-2
+                a.btn.btn-danger Test2
+
+        .row
+            .col-sm-12
+                p Experience
+                a.btn.btn-primary.full-width(data-toggle='collapse', href='#collapseExample', aria-expanded='false', aria-controls='collapseExample')
+                    | Link with href
+                #collapseExample.collapse
+                    .card.card-block
+                        | Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+
+        .row
+            .col-sm-12
+                p Partner
+        .row
+            .col-sm-12.promotion-set.partner
+                .promotion-icon
+                .promotion-icon
+                .promotion-icon
+                .promotion-icon
+        .row.footer
+            .col-sm-3
+                p Foot1
+            .col-sm-3
+                p Foot2
+            .col-sm-3
+                p Foot3
+            .col-sm-3
+                p Footer4p
