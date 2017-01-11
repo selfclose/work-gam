@@ -3,7 +3,6 @@ var gulp = require('gulp'),
     watch = require('gulp-watch'),
     sass = require('gulp-sass'),
     cleanCSS = require('gulp-clean-css');
-var gulpCopy = require('gulp-copy');
 //var compass = require('gulp-compass');
 
 //---new Watch---//
