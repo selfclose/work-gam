@@ -6,6 +6,15 @@ $('document').ready(function () {
         arrows: false
     });
 
+    //TODO: use soon
+    // $('.accordion').on('show', function (e) {
+    //     $(e.target).prev('.accordion-heading').find('.accordion-toggle').addClass('active');
+    // });
+    //
+    // $('.accordion').on('hide', function (e) {
+    //     $(this).find('.accordion-toggle').not($(e.target)).removeClass('active');
+    // });
+
     // $("#owl-demo").owlCarousel({
     //
     //     navigation : true, // Show next and prev buttons

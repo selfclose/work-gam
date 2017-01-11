@@ -1,9 +1,10 @@
 .thumb-menu
+    //pc
     .container
         .row.hidden-xs.flex
             .col-sm-3.flex-middle
                 a(href='#')
-                    img(src='../img/logo.png')
+                    img.logo(src='../img/logo.png')
             .col-sm-9.flex-space-between
                 a.btn.btn-lg.menu-icon.jdb
                 a.btn.btn-lg.menu-icon.fishing
@@ -15,7 +16,16 @@
                 a.btn.btn-lg.menu-icon.activity
                 a.btn.btn-lg.menu-icon.lucky
                 a.btn.btn-lg.menu-icon.played
-.row.visible-xs.btn-red.text-center
-    p
-    | 请先&nbsp;
-    a(href='#') 登入会员o
+
+    //on mobile
+    .row.visible-xs
+        .col-sm-3.text-left
+
+        .col-sm-6.text-center
+            a(href='#')
+                img.logo.small(src='../img/logo.png')
+        .col-sm-3.text-right
+    .row.visible-xs.btn-red.text-center
+        p
+        | 请先&nbsp;
+        a(href='#') 登入会员
