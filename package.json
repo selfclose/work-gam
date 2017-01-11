@@ -7,7 +7,6 @@
     "gulp-clean-css": "^2.3.2",
     "gulp-compass": "^2.1.0",
     "gulp-concat": "*",
-    "gulp-copy": "^1.0.0",
     "gulp-pug2": "0.0.2",
     "gulp-sass": "*",
     "gulp-watch": "*"

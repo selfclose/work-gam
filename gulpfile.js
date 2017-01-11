@@ -14,7 +14,7 @@ var path_new = {
 };
 
 gulp.task('default', function () {
-    gulp.watch('src/**/*.*', ['views', 'scss']);
+    gulp.watch('src/**/*.*', ['views', 'scss', 'script']);
 });
 
 gulp.task('views', function buildHTML() {
@@ -34,5 +34,5 @@ gulp.task('scss', function buildHTML() {
 
 gulp.task('script', function () {
    return gulp.src('./src/js/**/*.js')
-       .pipe(gulp.dest('./dest'));
+       .pipe(gulp.dest('./dest/js'));
 });
