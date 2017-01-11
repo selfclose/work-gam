@@ -1,6 +1,7 @@
 //@import "compass";
 $cl_lite: #dcdcdc;
 $img_user-experience: '../img/featrues-title.jpg';
+$img_user-experience-after: '../img/featrues-triangle.png';
 
 body {
   -webkit-font-smoothing: antialiased;
@@ -202,4 +203,17 @@ div.announcement {
   background-size: cover;
   background-position: 50%;
   cursor: pointer;
+
+  &:after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: -37px;
+    left: 50%;
+    z-index: 10;
+    margin-left: -160px;
+    width: 320px;
+    height: 37px;
+    background: url($img_user-experience-after) no-repeat 0 0;
+  }
 }
