@@ -8,7 +8,8 @@ $('document').ready(function () {
     });
 
     $('.marquee').marquee({
-        duration: 20000
+        duration: 20000,
+        pauseOnHover: true
     });
 
     //TODO: use soon
