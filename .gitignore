@@ -1,0 +1,26 @@
+# Created by .ignore support plugin (hsz.mobi)
+### Example user template template
+### Example user template
+
+# IntelliJ project files
+.idea
+.tmb
+.quarantine
+.lock
+
+composer.lock
+readme.html
+
+node_modules
+
+wp-content/themes/twentyfifteen
+wp-content/themes/twentyfourteen
+wp-content/themes/twentysixteen
+wp-content/themes/nictitate
+wp-content/themes/*.zip
+wp-content/themes/*.rar
+wp-content/cache_*
+wp-content/cache
+
+*.__jb_tmp__
+*.php__jb_tmp__
