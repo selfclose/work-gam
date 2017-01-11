@@ -4,11 +4,14 @@
   "description": "Project for ace programming",
   "devDependencies": {
     "gulp": "*",
+    "gulp-autoprefixer": "^3.1.1",
     "gulp-clean-css": "^2.3.2",
     "gulp-compass": "^2.1.0",
     "gulp-concat": "*",
+    "gulp-html2pug": "0.0.2",
     "gulp-pug2": "0.0.2",
     "gulp-sass": "*",
+    "gulp-strip-comments": "^2.4.3",
     "gulp-watch": "*"
   }
 }

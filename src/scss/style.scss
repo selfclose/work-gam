@@ -1,5 +1,6 @@
 //@import "compass";
 $cl_lite: #dcdcdc;
+$img_user-experience: '../img/featrues-title.jpg';
 
 body {
   -webkit-font-smoothing: antialiased;
@@ -20,6 +21,9 @@ body {
     background: linear-gradient(to bottom,  rgba(162,213,31,1) 1%,rgba(91,167,5,1) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a2d51f', endColorstr='#5ba705',GradientType=0 );
   }
+  &-blank {
+    background: rgba(0, 0, 0, 0.7);
+  }
 }
 
 //--- Widget Topbar ---//
@@ -38,56 +42,10 @@ body {
 }
 
 //-----widget ThumbMenu-----//
-$location_menu_icon: '../img/web_ico.png';
+@import "include/widget/menu";
 
-.thumb-menu {
-  background: -moz-linear-gradient(top,  rgba(86,86,86,0.86) 0%, rgba(0,0,0,1) 100%);
-  background: -webkit-linear-gradient(top,  rgba(86,86,86,0.86) 0%,rgba(0,0,0,1) 100%);
-  background: linear-gradient(to bottom,  rgba(86,86,86,0.86) 0%,rgba(0,0,0,1) 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#db565656', endColorstr='#000000',GradientType=0 );
-
-  .menu-icon {
-    background: url($location_menu_icon);
-    //display: inline-block;
-    width: 59px;
-    height: 90px;
-    filter: grayscale(1);
-    transition: .8s;
-    &:hover {
-      filter: grayscale(0);
-    }
-
-    &.jdb {
-      background-position: -625px -89px;
-    }
-    &.fishing {
-      background-position: -768px -89px;
-    }
-    &.ranking {
-      background-position: -700px -89px;
-    }
-    &.recreaction {
-      background-position: -75px -90px;
-    }
-    &.sport {
-      background-position: -143px -90px;
-    }
-    &.lottery {
-      background-position: -278px -90px;
-    }
-    &.mobile {
-      background-position: -211px -90px;
-    }
-    &.activity {
-      background-position: -346px -90px;
-    }
-    &.lucky {
-      background-position: -414px -90px;
-    }
-    &.played {
-      background-position: -485px -90px;
-    }
-  }
+.marquee {
+  overflow: hidden;
 }
 
 //------Widget Games-----//
@@ -210,20 +168,38 @@ $location_games_icon: '../img/sprites-profile.png';
    }
 }
 
-$xs-min: "only screen and (min-width:none)";
-$xs-max: "only screen and (max-width:520px)";
-$xs-sm: "only screen (min-width: none) and (max-width:767px)";
-
-$sm-min: "only screen and (min-width:768px)";
-$sm-max: "only screen and (max-width:991px)";
-$sm-md: "only screen (min-width: 768px) and (max-width:991px)";
-
-$md-min: "only screen and (min-width:992px)";
-$md-max: "only screen and (max-width:1199px)";
-$md-lg: "only screen (min-width: 992px) and (max-width:1199px)";
-
-$lg-min: "only screen and (min-width:1200px)";
-$lg-max: "only screen and (max-width:none)";
-
 @import "include/override_default";
 @import "include/mobile_override";
+
+$announce_height: 40px;
+div.announcement {
+  .ann-left {
+      display: flex;
+      height: $announce_height;
+      border-radius: 3px 0 0 3px;
+  }
+
+  .ann-right {
+    display: flex;
+    height: $announce_height;
+    border-radius: 0 3px 3px 0;
+  }
+
+  .ann-middle {
+    display: flex;
+    align-items: center;
+    height: $announce_height;
+    color: white;
+  }
+}
+
+.btn-user-experience {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  height: 130px;
+  background: url($img_user-experience) no-repeat 0 0;
+  background-size: cover;
+  background-position: 50%;
+  cursor: pointer;
+}

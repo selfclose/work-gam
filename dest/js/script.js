@@ -1,10 +1,24 @@
 //Jquery
 $('document').ready(function () {
-    $('.slider-carousel').slick({
+    $('.owl-carousel').owlCarousel({
         autoplay: true,
-        dots: true,
-        arrows: false
+        items: 1,
+        loop: true,
+        autoHeight:true
     });
+
+    $('.marquee').marquee({
+        duration: 20000
+    });
+
+    //TODO: use soon
+    // $('.accordion').on('show', function (e) {
+    //     $(e.target).prev('.accordion-heading').find('.accordion-toggle').addClass('active');
+    // });
+    //
+    // $('.accordion').on('hide', function (e) {
+    //     $(this).find('.accordion-toggle').not($(e.target)).removeClass('active');
+    // });
 
     // $("#owl-demo").owlCarousel({
     //

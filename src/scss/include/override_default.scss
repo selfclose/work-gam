@@ -5,3 +5,15 @@
 .slick-dotted.slick-slider {
   margin: 0 !important;
 }
+
+//carousel slider
+.owl-theme {
+  .owl-nav.disabled + .owl-dots {
+    margin-top: -30px;
+    position: relative;
+  }
+  .owl-dots .owl-dot span {
+    width: 20px;
+    height: 20px;
+  }
+}

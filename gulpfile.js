@@ -1,11 +1,14 @@
-var gulp = require('gulp'),
-    pug = require('gulp-pug2'),
-    watch = require('gulp-watch'),
-    sass = require('gulp-sass'),
-    cleanCSS = require('gulp-clean-css');
-//var compass = require('gulp-compass');
+var gulp = require('gulp'),             //core
+    pug = require('gulp-pug2'),         //pug -> HTML
+    watch = require('gulp-watch'),      //watch file change and trigger
+    sass = require('gulp-sass'),        //scss -> CSS
+    cleanCSS = require('gulp-clean-css'),   //minify css
+    strip = require('gulp-strip-comments'), //strip comments from files
+    autoprefixer = require('gulp-autoprefixer');
+var html2pug = require('gulp-html2pug');
 
-//---new Watch---//
+
+//var compass = require('gulp-compass');
 
 var path_new = {
     source: ['./src/html/**/*.pug', '!./src/html/include/**/*.pug'],
@@ -19,6 +22,7 @@ gulp.task('default', function () {
 gulp.task('views', function buildHTML() {
     return gulp.src(path_new.source)
         .pipe(pug())
+        .pipe(strip())
         .pipe(gulp.dest(path_new.dest))
 });
 gulp.task('scss', function buildHTML() {
@@ -27,14 +31,25 @@ gulp.task('scss', function buildHTML() {
         '!./src/scss/include/**/*.scss'
     ])
         .pipe(sass())
-        .pipe(cleanCSS({
-            compatibility: 'ie8',
-            specialComments: 0
+        .pipe(autoprefixer({
+            browsers: ['last 2 versions'],
+            cascade: false
         }))
+        // .pipe(cleanCSS({
+        //     compatibility: 'ie8',
+        //     specialComments: 0
+        // }))
         .pipe(gulp.dest('./dest/css'))
 });
 
 gulp.task('script', function () {
    return gulp.src('./src/js/**/*.js')
        .pipe(gulp.dest('./dest/js'));
+});
+
+gulp.task('html2pug', function() {
+    // Backend locales
+    return gulp.src('./import/html/**/*.html')
+        .pipe(html2pug())
+        .pipe(gulp.dest('./src/html'));
 });
