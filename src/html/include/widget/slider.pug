@@ -1,7 +1,35 @@
-.slider-carousel
-    img(src='../img/banner-0929.jpg')
-    img(src='../img/banner-0930.jpg')
-    img(src='../img/banner-0907.jpg')
-    img(src='../img/banner-0829.jpg')
-    img(src='../img/banner-0901.jpg')
-    img(src='../img/banner-0525.jpg')
+- var marquee = "尊敬的各位会员，由于我们运营地点要转入台湾，目前网站会停止运营，待安排完成后，我们就会马上开启网站，会员之前的金额即将恢复，给您带来不便，请您谅解。"
+.owl-carousel.owl-theme
+
+    .owl-item
+        a(href='#')
+            img(src='../img/banner-0929.jpg')
+    .owl-item
+        a(href='#')
+            img(src='../img/banner-0930.jpg')
+    .owl-item
+        a(href='#')
+            img(src='../img/banner-0907.jpg')
+    .owl-item
+        a(href='#')
+            img(src='../img/banner-0829.jpg')
+    .owl-item
+        a(href='#')
+            img(src='../img/banner-0901.jpg')
+    .owl-item
+        a(href='#')
+            img(src='../img/banner-0525.jpg')
+.container
+    //.row
+    //    .btn-group.btn-group-lg(role='group')
+    //        .btn.btn-red sdspdos
+    //        .btn.btn-blank.marquee erporepro
+    //        .btn.btn-green erporepro
+
+    .row.announcement
+        .col-sm-2.hidden-xs.text-right.no-padding
+            .ann-left.btn-red Test12
+        .col-sm-8.col-xs-12.marquee.btn-blank
+            .ann-middle #{marquee}
+        .col-sm-2.hidden-xs.text-left.no-padding
+            .ann-right.btn-green Right Btn

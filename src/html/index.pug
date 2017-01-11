@@ -11,28 +11,21 @@ html(lang='zh')
             //menu row
             .row
                 include include/widget/menu
+
         .full-width
             include include/widget/slider
         .container-fluid.widget-games
             .row
                 include include/widget/game-list
-        .container
-            .row.announcment
-                .col-xs-2
-                    a.btn.btn-warning Test1
-                .col-xs-8.marquee-text
-                    p text here
-                .col-xs-2
-                    a.btn.btn-danger Test2
+
 
             .row
-                .col-sm-12
-                    p Experience
-                    a.btn.btn-primary.full-width(data-toggle='collapse', href='#collapseExample', aria-expanded='false', aria-controls='collapseExample')
-                        | The Best User Experience
-                    #collapseExample.collapse.active.in
-                        .card.card-block
-                            | Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+                p Experience
+                a.btn.full-width.btn-user-experience(data-toggle='collapse', href='#collapseExample', aria-expanded='false', aria-controls='collapseExample')
+                    | The Best User Experience
+                #collapseExample.collapse.active.in
+                    .card.card-block
+                        | Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
 
             .row
                 .col-sm-12

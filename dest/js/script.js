@@ -1,9 +1,14 @@
 //Jquery
 $('document').ready(function () {
-    $('.slider-carousel').slick({
+    $('.owl-carousel').owlCarousel({
         autoplay: true,
-        dots: true,
-        arrows: false
+        items: 1,
+        loop: true,
+        autoHeight:true
+    });
+
+    $('.marquee').marquee({
+        duration: 20000
     });
 
     //TODO: use soon
